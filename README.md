@@ -1,6 +1,6 @@
 # Wiredcraft Back-end Developer Test
 
-Building a web app using Node.js, Express, MongoDB and Postman. It follows typical RESTful API design pattern.
+Building a web app using Node.js, Express, MongoDB and Swagger UI. It follows typical RESTful API design pattern.
 
 ## SETUP
 
@@ -27,5 +27,13 @@ npm run server
 Paste this url and hit enter:
 
 ```
-http://127.0.0.1:3000/
+http://localhost:3000/users
+```
+
+### RESTful API Documentation
+
+You find the API Documentation under this url:
+
+```
+http://localhost:3000/api-docs/
 ```
