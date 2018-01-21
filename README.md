@@ -30,6 +30,22 @@ Paste this url and hit enter:
 http://localhost:3000/api/users
 ```
 
+### Testing & Coverage
+
+You can check if all tests pass:
+
+```
+npm run test
+```
+
+And also check how high is the test coverage:
+
+```
+npm run coverage
+```
+
+## Documentation
+
 ### RESTful API Documentation
 
 You find the API Documentation under this url:
