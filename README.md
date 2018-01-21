@@ -27,7 +27,7 @@ npm run server
 Paste this url and hit enter:
 
 ```
-http://localhost:3000/users
+http://localhost:3000/api/users
 ```
 
 ### RESTful API Documentation
