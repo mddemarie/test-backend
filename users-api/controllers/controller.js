@@ -2,8 +2,8 @@
 const mongoose = require('mongoose'),
     User = mongoose.model('Users');
 
-exports.list_all_users = function(req, res){
-    User.find({}, function(err, user) {
+exports.list_all_users = function (req, res) {
+    User.find({}, function (err, user) {
         if (err) {
             res.send(err);
         };
@@ -11,9 +11,9 @@ exports.list_all_users = function(req, res){
     });
 };
 
-exports.create_a_user = function(req, res) {
+exports.create_a_user = function (req, res) {
     const new_user = new User(req.body);
-    new_user.save(function(err, user) {
+    new_user.save(function (err, user) {
         if (err) {
             res.send(err)
         };
@@ -21,8 +21,8 @@ exports.create_a_user = function(req, res) {
     });
 };
 
-exports.read_a_user = function(req, res) {
-    User.findById(req.params.userId, function(err, user) {
+exports.read_a_user = function (req, res) {
+    User.findById(req.params.userId, function (err, user) {
         if (err) {
             res.send(err);
         };
@@ -30,8 +30,8 @@ exports.read_a_user = function(req, res) {
     });
 };
 
-exports.update_a_user = function(req, res) {
-    User.findOneAndUpdate({ _id: req.params.userId }, req.body, { new: true }, function(err, user) {
+exports.update_a_user = function (req, res) {
+    User.findOneAndUpdate({ _id: req.params.userId }, req.body, { new: true }, function (err, user) {
         if (err) {
             res.send(err);
         };
@@ -39,8 +39,8 @@ exports.update_a_user = function(req, res) {
     });
 };
 
-exports.delete_a_user = function(req, res) {
-    User.remove({ _id: req.params.userId }, function(err, user) {
+exports.delete_a_user = function (req, res) {
+    User.remove({ _id: req.params.userId }, function (err, user) {
         if (err) {
             res.send(err);
         };

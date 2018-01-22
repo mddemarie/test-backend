@@ -5,7 +5,7 @@ const express = require('express'),
     User = require('./users-api/models/model'),
     routes = require('./users-api/routes/route'),
     bodyParser = require('body-parser'),
-    router = express.Router();
+    router = express.Router(),
     swaggerUi = require('swagger-ui-express'),
     swaggerDocument = require('./swagger.json');
 
@@ -19,8 +19,8 @@ app.use('/api', router);
 
 routes(app);
 
-app.use(function(req, res, next) {
-    res.status(404).send({url: req.originalUrl + ' not found'})
+app.use(function (req, res, next) {
+    res.status(404).send({ url: req.originalUrl + ' not found' })
 });
 
 app.listen(port);
